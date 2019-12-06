@@ -57,3 +57,27 @@ While quality does not only mean “reducing the number of defects”, it is cer
 ## 7. Risk
 
 The reason for testing software boils down to minimizing risk, for everybody involved: customers, users, developers etc. Independent testing of the software allow for objective analysis of the quality of the system. This reduces risk by providing information on the status of the system, both at a high level and a low level. Software development is a complex and risky process. If you want to reduce risk, software testers are essential as part of the team.
+
+# Testing Basics
+
+The core concept of testing is checking **expected behavior** against **observed behavior**. That is, ensuring that the software does what you expect it to under certain circumstances. There will be lots of adjustments, wrinkles, and caveats to that, but the root of all testing is comparing expected behavior with observed behavior.
+
+## Equivalence Classes
+
+An **equivalence class** (also called an equivalence partition) is one set of input values that maps to an output value. You can think of them as different "groups" of input values that do something similar. This enables testers to create tests which cover all parts of functionality, and avoid over testing just one part.
+
+Equivalence class partitioning is the act of determining our equivalence classes and ensuring that they do not overlap at all, but do cover all possible input values. In other words, they must maintain a strict partitioning.
+
+### Interior and Boundary Values
+
+There's an axiom in testing that defects are more likely to be found near boundaries of two equivalence classes. These values -the "last" of one equivalence class and the "first" of a new equivalence class - are called boundary values. Values which are not boundary values are called interior values.
+
+The reason why defects are most likely to be found near the boundary is that it is much more likely for code to have an error near a boundary because equivalence classes are so close.
+
+One could also consider implicit boundary values. In contrast to explicit boundary values, which are a natural outgrowth of requirements, implicit values grow out of the system under test or the environment under which the system operates.
+
+## Base Cases, Edge Cases, Corner Cases
+
+- **base case** - the system is operating within expected parameters for normal use.
+- **edge case** - When input values are outside normal operating parameter or are approaching the limits of what the system can handle, this is called an edge case.
+- **corner cases** - also called **pathological** refer to situations where multiple things go wrong at the same time, or where a value is put, to put it bluntly, ridiculously out of range from what is expected.
