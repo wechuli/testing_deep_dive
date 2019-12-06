@@ -81,3 +81,5 @@ One could also consider implicit boundary values. In contrast to explicit bounda
 - **base case** - the system is operating within expected parameters for normal use.
 - **edge case** - When input values are outside normal operating parameter or are approaching the limits of what the system can handle, this is called an edge case.
 - **corner cases** - also called **pathological** refer to situations where multiple things go wrong at the same time, or where a value is put, to put it bluntly, ridiculously out of range from what is expected.
+
+
