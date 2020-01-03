@@ -82,7 +82,6 @@ One could also consider implicit boundary values. In contrast to explicit bounda
 - **edge case** - When input values are outside normal operating parameter or are approaching the limits of what the system can handle, this is called an edge case.
 - **corner cases** - also called **pathological** refer to situations where multiple things go wrong at the same time, or where a value is put, to put it bluntly, ridiculously out of range from what is expected.
 
-
 ## Success Cases and Failure Cases
 
 When discussing test cases, there are two kinds of output that one would expect from a given test. First, there may be a **success case** (also called a **positive test case**); that is, the case returns an expected result given the input given to it. In general, tests following the happy path of what a user would normally do should be success cases.
@@ -97,4 +96,8 @@ There are various ways of testing a system, each of which has benefits and drawb
 - The opposite of black-box testing is white-box testing. Here, the tester has intimate knowledge of the codebase and directly tests the code itself. White-box tests can test individual functions of the code, often looking at much more granular specs of the system than black-box tests. White-box tests access the code as code - checking that return values from functions are correct, ensuring that objects are instantiated properly - instead of looking at the system from a user's perspective.
 - **Grey-box testing**, as its name implies, is a hybrid approach between white and black-box testing.Grey-box testing involves accessing the system as a user (as a black-box tester would do), but with knowledge of the codebase and system (as a white-box tester would have). Using this knowledge, the grey-box tester can write more focused black-box tests.
 
+## Static and Dynamic Testing
 
+Another way of categorizing tests is to group them into static tests and dynamic tests. In dynamic tests, the system under test is actually running; the code is executed.
+
+A static test, by contrast, does not execute the code. Rather, it attempts to test aspects of the system without actually running the system. Examples of static testing would be running a linter or having somebody review the code manually without actually running it.
