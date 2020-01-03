@@ -83,3 +83,18 @@ One could also consider implicit boundary values. In contrast to explicit bounda
 - **corner cases** - also called **pathological** refer to situations where multiple things go wrong at the same time, or where a value is put, to put it bluntly, ridiculously out of range from what is expected.
 
 
+## Success Cases and Failure Cases
+
+When discussing test cases, there are two kinds of output that one would expect from a given test. First, there may be a **success case** (also called a **positive test case**); that is, the case returns an expected result given the input given to it. In general, tests following the happy path of what a user would normally do should be success cases.
+
+**Failure cases** also called negative test cases are cases in which we expect the system to "fail" for some reason, such as attempting to write to a read-only disk, getting the square root of a negative number, or attempting to add an invalid username to a system. In failure cases, instead of returning a correct result, the system will do… something else. What this “something else” is will vary from test to test, and with what kind of functionality is being tested. Some examples might be returning an error code or default value, throwing an exception, shutting the system down, or simply logging the error to a log file or stderr.
+
+## Black-,White-, and Grey-Box Testing
+
+There are various ways of testing a system, each of which has benefits and drawbacks.
+
+- Perhaps the easiest kind of testing to understand is `black-box testing`. In black-box testing, the tester has no knowledge of the internal workings of the system and accesses the system, as a user would. In other words, the tester does not know about what database is in use, what classes exist, or even what language the program is written in. Instead, testing occurs as if the tester were an ordinary user of the software. The black-box tester focuses on whether or not the system under test operates as expected from the user's point of view and is free from user facing defects.
+- The opposite of black-box testing is white-box testing. Here, the tester has intimate knowledge of the codebase and directly tests the code itself. White-box tests can test individual functions of the code, often looking at much more granular specs of the system than black-box tests. White-box tests access the code as code - checking that return values from functions are correct, ensuring that objects are instantiated properly - instead of looking at the system from a user's perspective.
+- **Grey-box testing**, as its name implies, is a hybrid approach between white and black-box testing.Grey-box testing involves accessing the system as a user (as a black-box tester would do), but with knowledge of the codebase and system (as a white-box tester would have). Using this knowledge, the grey-box tester can write more focused black-box tests.
+
+
