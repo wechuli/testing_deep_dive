@@ -37,3 +37,7 @@ You will also want to think of cases that test the various boundaries as well as
 Developing test cases for non-functional requirements (quality attributes) of the system can often be difficult. You should try to ensure that the requirements themselves are testable and think of ways to quantify any test cases that you can think of for those requirements.
 
 Unfortunately, simply having a correspondence between all requirements and a test case for each does not always mean that you have developed a good test plan. You may have to add additional tests to ensure that requirements work together in tandem, or check for cases from the user’s point of view that may not map directly to requirements or flow directly from them. Even more importantly, you will need to gain an understanding of the context that the software exists in. Having domain knowledge of the field can help you understand basic use cases, how the system interacts with the environment, possible failure modes, and how users would expect the system to recover from those failure modes. If nobody on the team understands the domain of the software, it may be worthwhile to discuss the software with a subject matter expert (SME) before writing a test plan.
+
+## Test Fixtures
+
+As you write your plan, you may find that you wish to test situations which are difficult to replicate.
