@@ -81,7 +81,6 @@ When tracking a test run, there are several pieces of information that you will 
 5. The final status of each test case. Note that temporary statuses, such as PAUSED, should be changed to the final status before finishing the
 6. A list of any defects filed as a result of the test case, if any, or other reasons for any status that is not PASSED.
 
-
 If a test fails, then one of two things should happen: Either a new defect should be filed or the already-known defect that is causing the failure should be noted. A defect indicates that the system is not operating as designed; the expected behavior does not match the observed behavior.
 
 ## Traceability Metrices
@@ -90,4 +89,6 @@ We have informally developed tests that we suppose will meet requirements, but w
 
 Occasionally, in the "real world", there may be some tests that do not officially line up with a specific requirement. For example, if a systems engineer did not put in a requirement for reliability, the test plan may still include a test for ensuring that the system works even when running for an entire day. This is certainly not a best practice, but it does happen occasionally. If this occurs, the best course of action would be to create a requirement for reliability that it can be tested against.
 
-Of course, a traceability matrix provides a very simple overview of the test coverage.
+Of course, a traceability matrix provides a very simple overview of the test coverage. The fact that every requirement has been tested does not mean that each requirement has been tested thoroughly.
+
+Traceability matrices are a good way to double-check your work and report to others outside of your team how well covered the system is from a test perspective. In time crunches, you or your manager may decide that certain parts or functions of the system are more important to test than others, and so you may not even write tests for these less-important aspects. Again, this is not a good practice, but at least you can use a traceability matrix to keep track of where the gaps in your testing coverage are. Customers and management, especially in highly regulated fields such as defense contracting and medicine, may also require traceability matrices as a way of proving that the systems have been tested to at least a baseline level.
