@@ -1,9 +1,11 @@
-console.log("Cat Weighing System");
-
 function catWeigher(catWeight) {
-  if (catWeight <= 0 || typeof catWeight !== "number") {
-    console.error("Please enter a valid parameter");
-    return;
+  console.log("Cat Weighing System");
+  if (
+    catWeigher === undefined ||
+    catWeight <= 0 ||
+    typeof catWeight !== "number"
+  ) {
+    throw new Error("Please enter a valid parameter");
   }
   if (catWeight < 3) {
     console.log("Cat is underweight");
@@ -14,6 +16,6 @@ function catWeigher(catWeight) {
   }
 }
 
-module.exports = catWeigher;
 
-catWeigher(445);
+
+module.exports = catWeigher;
