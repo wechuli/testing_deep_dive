@@ -8,11 +8,11 @@ function catWeigher(catWeight) {
     throw new Error("Please enter a valid parameter");
   }
   if (catWeight < 3) {
-    console.log("Cat is underweight");
+    return "Cat is underweight";
   } else if (catWeight >= 3 && catWeight < 6) {
-    console.log("Cat is normal weight");
+    return "Cat is normal weight";
   } else {
-    console.log("Cat is overweight");
+    return "Cat is overweight";
   }
 }
 
