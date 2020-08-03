@@ -1,0 +1,16 @@
+You can find virtually all of the defects that a comprehensive test approach would find while using orders of magnitude less testing time and resources. This technique is called combinatorial testing. Testing all possible pairs of values is a kind of combinatorial testing, but has its own term, pairwise testing or all-pairs testing.
+
+## Stochastic and Property-Based Testing
+
+Stochastic testing is black box testing, random testing, performed by automated testing tools. Stochastic testing is a series of random tests over time. Stochastic testing is also referred to as monkey testing.
+
+Since you - or more precisely, the stochastic testing system- may not know exactly what the expected behavior should be for a given input, you need to check for properties of the system. At the unit testing level, where you are checking individual methods, this is called **property-based testing**
+
+### Smart, Dumb, Evil and Chaos Monkeys
+
+- **Dumb Monkey** testing is sending in just any old input you can think of.
+- **Smart monkey** - testing involves using input which a user might conceivably enter, as opposed to being strictly random. Creating a smart monkey test can be difficult, because not only do you have to first understand what users would likely do with the application, but then develop a model for it. However, the smart monkey is much more likely to discover a defect in the system under test.
+- **Evil monkey** - testing simulates a malicious user who is actively trying to hurt your system. This can be through sending very long strings, potential injection attacks, malformed data, or other inputs which are designed to cause havoc in your system. In today's networked world, systems are almost always under attack if they are connected to the Internet.
+- **Chaos Monkey** - is a tool developed by Netflix which randomly shuts down servers that their system is running on, in order to simulate random outages. For any large system, servers will go down on a regular basis, and at any given time, some percentage of systems will be unavailable. Chaos monkey testing ensures that the system as a whole will be able to operate effectively when when individual machines are not responding.
+
+## Performance Testing
